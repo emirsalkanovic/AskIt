@@ -22,7 +22,7 @@ app.use(
 app.use(bodyParser.json());
 
 const db = require("./config/keys").mongoURI;
-
+process.env.MONGODB_URI = db;
 mongoose
     .connect(
         db,
