@@ -31,7 +31,6 @@ mongoose
     .then(() => console.log("MongoDB successfully connected"))
     .catch(err => console.log(err));
 
-const db = process.env.MONGODB_URI;
 app.use(passport.initialize());
 require("./config/passport")(passport);
 app.use("/api/users", users);
