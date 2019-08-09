@@ -21,10 +21,9 @@ app.use(
 );
 app.use(bodyParser.json());
 
-//const db = require("./config/keys").mongoURI;
-const db = process.env.MONGODB_URI;
+const db = require("./config/keys").mongoURI;
 mongoose
-    .connect(
+    .connect(process.env.MONGODB_URI ||
         db,
         { useNewUrlParser: true }
     )
