@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\client",
+    "\\client\\src",
+    "\\client\\src\\components",
+    "\\config",
+    "\\middleware",
+    "\\models",
+    "\\routes",
+    "\\routes\\api",
+    "\\validation"
+  ],
+  "SelectedNode": "\\client\\src\\components\\ProfilePage.js",
+  "PreviewInSolutionExplorer": false
+}
