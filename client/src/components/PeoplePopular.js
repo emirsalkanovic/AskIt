@@ -46,10 +46,15 @@ class PeoplePopular extends Component {
 
         let popularPeople = []
 
-        for(let i = 0; i < names.length; i++) {
+        for (let i = 0; i < names.length; i++) {
             popularPeople[i] = question.filter(item => item.user === names[i].name)
         }
-
+        for (let i = 0; i < popularPeople.length; i++) {
+            if (popularPeople[i].length < 1) {
+                popularPeople.splice(i, 1)
+            }
+        }
+        console.log("popularPeople",popularPeople)
         popularPeople.sort((a, b) => b.length - a.length)
 
 
