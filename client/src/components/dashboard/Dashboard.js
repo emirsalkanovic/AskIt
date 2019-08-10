@@ -41,7 +41,7 @@ class Dashboard extends Component {
     }
 
     getDataFromDb = () => {
-        fetch('http://localhost:5000/api/getData')
+        fetch('/api/getData')
             .then((data) => data.json())
             .then((res) => this.setState({ data: res.data}))
     }
@@ -52,7 +52,7 @@ class Dashboard extends Component {
             message: this.state.message
         }
        
-        axios.post("http://localhost:5000/api/putData", question)
+        axios.post("/api/putData", question)
             .then(response => {
                 console.log(response)
             })

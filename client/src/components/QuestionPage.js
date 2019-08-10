@@ -43,7 +43,7 @@ class QuestionPage extends Component {
     }
 
     async sendComment(comment) { 
-       await axios.post("http://localhost:5000/api/putComment", comment)
+       await axios.post("/api/putComment", comment)
             .then(response => {
                 console.log(response)
             })
@@ -60,7 +60,7 @@ class QuestionPage extends Component {
         };
         
 
-        axios.post("http://localhost:5000/api/putLike", like)
+        axios.post("/api/putLike", like)
             .then(response => {
                 console.log(response)
             })
@@ -74,7 +74,7 @@ class QuestionPage extends Component {
             id: this.props.data._id,
             unlike: "unlike"
         };
-        axios.post("http://localhost:5000/api/putUnlike", unlike)
+        axios.post("/api/putUnlike", unlike)
             .then(response => {
                 console.log(response)
             })

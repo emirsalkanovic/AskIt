@@ -39,13 +39,13 @@ class HomePage extends Component {
     }
 
     getDataFromDb = async () => {
-        await fetch('http://localhost:5000/api/getData')
+        await fetch('/api/getData')
             .then((data) => data.json())
             .then((res) => this.setState({ questions: res.data }))
     }
 
     getUserFromDb = async () => {
-        await fetch("http://localhost:5000/api/users/users")
+        await fetch("/api/users/users")
             .then((users) => users.json())
             .then((res) => this.setState({users: res.users}))
     }
